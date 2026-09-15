@@ -1,9 +1,13 @@
 {
-  "name": "kitaptan-quiz",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Ders kitabı PDF'inden otomatik sınav üreten uygulama",
+  "name": "kitaptan-quiz-functions",
+  "description": "Kitaptan Sınav - Firebase Cloud Functions",
   "engines": {
-    "node": ">=18"
-  }
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^12.6.0"
+  },
+  "private": true
 }

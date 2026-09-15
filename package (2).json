@@ -1,0 +1,12 @@
+{
+  "name": "kitaptan-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ders kitabı PDF'inden otomatik sınav üreten uygulama",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@vercel/edge": "^1.1.1"
+  }
+}

@@ -26,10 +26,15 @@ Bir ders kitabı PDF'i yükleyip, içeriğe göre karışık (çoktan seçmeli +
    ```
 2. [vercel.com](https://vercel.com) → **Add New Project** → GitHub reponuzu seçin → **Import**.
 3. Build ayarlarına dokunmanıza gerek yok (`vercel.json` zaten `public` klasörünü statik kök olarak ayarlıyor, `/api` klasörü otomatik algılanır).
-4. **Settings → Environment Variables** kısmına şunu ekleyin:
-   - Key: `ANTHROPIC_API_KEY`
-   - Value: kendi Anthropic API anahtarınız
+4. **Settings → Environment Variables** kısmına şunları ekleyin:
+   - `ANTHROPIC_API_KEY` → kendi Anthropic API anahtarınız
+   - `APP_USERNAME` → çocuğunuzun kullanacağı kullanıcı adı (örn. `ayse`)
+   - `APP_PASSWORD` → çocuğunuzun kullanacağı şifre
+   - `AUTH_TOKEN` → uzun, rastgele bir metin (kimse tahmin edemesin). Örnek: `211e0b84aa62b7eedf3dcff0a3c6d1688cb47cdb4ff550b105af6b7eddf9ed5c` — isterseniz bunu kullanabilir ya da kendi rastgele dizinizi oluşturabilirsiniz.
 5. **Deploy**'a basın. Birkaç saniye içinde `https://REPO_ADI.vercel.app` adresinde canlı olur.
+6. Siteyi açtığınızda önce giriş ekranı gelir; `APP_USERNAME`/`APP_PASSWORD` ile giriş yapılmadan sınav sayfasına ya da soru üretme API'sine erişilemez.
+
+> Not: Bu basit giriş sistemi (`middleware.js`) sadece **Vercel**'de çalışır. Firebase'e geçerseniz farklı bir kimlik doğrulama yöntemi (Firebase Authentication) kurmak gerekir.
 
 Sonraki her `git push` otomatik olarak yeniden dağıtım yapar.
 
