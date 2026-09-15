@@ -1,0 +1,13 @@
+{
+  "name": "kitaptan-quiz-functions",
+  "description": "Kitaptan Sınav - Firebase Cloud Functions",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^6.0.1",
+    "firebase-admin": "^12.6.0"
+  },
+  "private": true
+}
